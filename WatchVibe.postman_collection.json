@@ -1,0 +1,1180 @@
+{
+	"info": {
+		"_postman_id": "2d9d731f-5640-4870-a51b-77ab63a60c85",
+		"name": "WatchVibe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20074469"
+	},
+	"item": [
+		{
+			"name": "Videos",
+			"item": [
+				{
+					"name": "GetVideoBy_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/videos/get-videobyId/65b6d9e12961b21d8801422f",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"get-videobyId",
+								"65b6d9e12961b21d8801422f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateVideoBy_Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Kuch nI",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "update purana thumbnail",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Downloads/IMG_20230510_184740665.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost3}}/videos/update-videobyId/65b5308829add300d38c25eb",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"update-videobyId",
+								"65b5308829add300d38c25eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllvideos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/videos/get-allvideos",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"get-allvideos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PublishAVideo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "My First Video",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "I am uploding my second video",
+									"type": "text"
+								},
+								{
+									"key": "videoFile",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Downloads/UplaodVideo.mp4"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Desktop/cover.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost3}}/videos/upload-video",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"upload-video"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-videobyId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/videos/delete-videobyId/65b5308829add300d38c25eb",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"delete-videobyId",
+								"65b5308829add300d38c25eb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle-videobyId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/videos/toggle-videobyId/65b6d9e12961b21d8801422f",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"videos",
+								"toggle-videobyId",
+								"65b6d9e12961b21d8801422f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    //  \"email\" : \"jkhan\",\n    \"email\" : \"jeeshankhan3232@gmail.com\",\n    \"password\" : \"jeeshankhan89\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/login",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fullName",
+									"value": "Jeeshan Khan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jeeshankhan3232@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "gshankhan",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Desktop/avatar.png"
+								},
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Desktop/cover.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:6000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n    \"oldPassword\" : \"123456\",\n    \"newPassword\" : \"jeeshan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/change-password",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/logout",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\" : \"Jeshan\",\n    \"email\" : \"jeeshankhan3232@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/update-account",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"update-account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserAvatar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Downloads/IMG_20231129_163157_885.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/avatar",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUserCoverImage",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coverImage",
+									"type": "file",
+									"src": "/Users/jeeshankhan/Desktop/cover.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/cover-image",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"cover-image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/current-user",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"current-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accesstoken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/refresh-token",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verifyotp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\" : \"3317\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/verifyotp",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"verifyotp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-userchannel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/get-userchannel/jeeshankhan",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"get-userchannel",
+								"jeeshankhan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/get-history",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"get-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget-pasword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"jeeshankhan3232@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/forgot-password",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\" : \"2368\",\n    \"newPassword\" : \"jeeshankhan89\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/reset-password",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify-email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/verify-email/0582e3c5e87251e961535d83296d2b05ec4f1333",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"verify-email",
+								"0582e3c5e87251e961535d83296d2b05ec4f1333"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asign-role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\": \"ADMIN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/users/asign-role/65bffc38d5b247bc8caec9d2",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"asign-role",
+								"65bffc38d5b247bc8caec9d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resend-email-verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/users/resend-email-verification",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"users",
+								"resend-email-verification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscribe&channel",
+			"item": [
+				{
+					"name": "ToggelSubscription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/subscriptions/toggle-subscription/65897c7eac2650bb6562d884",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"subscriptions",
+								"toggle-subscription",
+								"65897c7eac2650bb6562d884"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-subscriberchhanelbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/subscriptions/get-subscriberbyid/65897c7eac2650bb6562d884",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"subscriptions",
+								"get-subscriberbyid",
+								"65897c7eac2650bb6562d884"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-subcriptionbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/subscriptions/get-subscriptionbyid/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"subscriptions",
+								"get-subscriptionbyid",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Playlist",
+			"item": [
+				{
+					"name": "Create-PlaylistById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Fist PlayList\",\n    \"description\": \"Kuch nai pehli hi banai hain\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/playlist/create-playlistbyid/65b6d9e12961b21d8801422f",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"create-playlistbyid",
+								"65b6d9e12961b21d8801422f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-BlaylistByuserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/playlist/get-playlistbyuserId/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"get-playlistbyuserId",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-PlaylistById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/playlist/get-playlistbyId/65b6dc4b7794615ab13882e9",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"get-playlistbyId",
+								"65b6dc4b7794615ab13882e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add-videos-to-playlistbyId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/playlist/add-videos-to-playlistbyId/65b6dc4b7794615ab13882e9/65b6d9e12961b21d8801422f",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"add-videos-to-playlistbyId",
+								"65b6dc4b7794615ab13882e9",
+								"65b6d9e12961b21d8801422f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove-videos-to-playlistbyId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/playlist/remove-videos-to-playlistbyId/65b55cb8587cfb1c05915dc5/65b52f52394d928c30ac23dd",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"remove-videos-to-playlistbyId",
+								"65b55cb8587cfb1c05915dc5",
+								"65b52f52394d928c30ac23dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-playlistbyId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/playlist/delete-playlistbyId/65b55cb8587cfb1c05915dc5",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"delete-playlistbyId",
+								"65b55cb8587cfb1c05915dc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-playlistbyId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" :\"Second Title\",\n    \"description\" :\"Sab badal dala re baba\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/playlist/update-playlistbyId/65b6dc4b7794615ab13882e9",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"playlist",
+								"update-playlistbyId",
+								"65b6dc4b7794615ab13882e9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tweets",
+			"item": [
+				{
+					"name": "Create-Tweet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"Hi this is my second tweet\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/tweets/create-tweet",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"tweets",
+								"create-tweet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-usertweetbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/tweets/get-usertweetbyId/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"tweets",
+								"get-usertweetbyId",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-usertweetbyId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"this is my updated tweeet for second time\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/tweets/update-usertweetbyId/65b6deffd11113a75574ab98",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"tweets",
+								"update-usertweetbyId",
+								"65b6deffd11113a75574ab98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-usertweetbyId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/tweets/delete-usertweetbyId/65b65c9c2583a5498fb93341",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"tweets",
+								"delete-usertweetbyId",
+								"65b65c9c2583a5498fb93341"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get-commentsbyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/comments/get-commentsbyId/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"comments",
+								"get-commentsbyId",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-commentsbyId",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"Your video is very bad\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/comments/update-commentbyId/65b6df91adc8a1bbbd1f1903",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"comments",
+								"update-commentbyId",
+								"65b6df91adc8a1bbbd1f1903"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-commentbyId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/comments/delete-commentbyId/65b67cda60f6bf3da4628bdf",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"comments",
+								"delete-commentbyId",
+								"65b67cda60f6bf3da4628bdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add-commentbyId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\" : \"Hello your videos is cool\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost3}}/comments/add-commentsbyId/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"comments",
+								"add-commentsbyId",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Liked",
+			"item": [
+				{
+					"name": "Toggle-like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/likes/toggle-like/v/65b6d772955d153e3e6f1b66",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"likes",
+								"toggle-like",
+								"v",
+								"65b6d772955d153e3e6f1b66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle-commentlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/likes/toggle-commentlike/c/65b6dfdaadc8a1bbbd1f190b",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"likes",
+								"toggle-commentlike",
+								"c",
+								"65b6dfdaadc8a1bbbd1f190b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle-tweetlike",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/likes/toggle-tweetlike/t/65b6deffd11113a75574ab98",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"likes",
+								"toggle-tweetlike",
+								"t",
+								"65b6deffd11113a75574ab98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-like",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/likes/get-like/videos",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"likes",
+								"get-like",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Get-channelStats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/dashboard/get-channel/stats",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"dashboard",
+								"get-channel",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-videos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost3}}/dashboard/get-videos/videos",
+							"host": [
+								"{{localhost3}}"
+							],
+							"path": [
+								"dashboard",
+								"get-videos",
+								"videos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Healthcheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost3}}/healthcheck/healthcheck",
+					"host": [
+						"{{localhost3}}"
+					],
+					"path": [
+						"healthcheck",
+						"healthcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

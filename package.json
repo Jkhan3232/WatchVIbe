@@ -1,0 +1,39 @@
+{
+  "name": "pro_backend",
+  "version": "1.0.0",
+  "description": "Start Professniol Work",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config  --experimental-json-modules src/servers/index.js",
+    "swagger": "node ./swagger.js"
+
+  },
+  "author": "Jeeshan Khan",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "swagger-autogen": "^2.23.7"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^1.41.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mailgen": "^2.0.28",
+    "mongoose": "^8.0.0",
+    "mongoose-aggregate-paginate-v2": "^1.0.7",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.8",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
